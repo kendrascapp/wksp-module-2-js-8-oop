@@ -168,18 +168,18 @@ concordiaBootcamps.noise();
 ```js
 class Dog {
     constructor(voice) {
-        this.voice = voice;
+        this.voice = voice; || 'bark';
     }
-    noise = () => {
+    noise = () => {          //noise is the method
         console.log('woof');
     }
-    coolOff = () => {
+    coolOff = () => {     //coolOff is method
         console.log('pant');
     }
 }
 
-let mastiff = new Dog();
-let terrier = new Dog();
+let mastiff = new Dog('WOOF'); 
+let terrier = new Dog('yip');
 ```
 
 ---
@@ -230,7 +230,16 @@ myCar.drive();
 // 2. How could we represent varying hunger levels based on activity?
 // 3. How about when it eats?
 class Animal {
-
+    constructor(name) {
+        this.name = name;
+        this.hungerLvl = 0;
+    }
+    play = () => {
+        this.hungerLvl += 20;
+    }
+    eat = () => {
+        this.hungerLvl -= 30;
+    }
 }
 
 ```
